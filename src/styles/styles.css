@@ -1,5 +1,6 @@
 body {
-    margin:0
+    margin:0;
+    font-style: Roboto;
 }
 
 header {
@@ -16,4 +17,16 @@ header {
 header input {
     font-size: 20px;
     margin:20px 0px
+}
+
+.news_item{
+    padding: 20px;
+    box-sizing: border-box;    
+    border-bottom: 1px solid grey;
+}
+.active{
+background-color: rgb(40, 40, 128);
+}
+.noactive{
+    background-color: red;
 }

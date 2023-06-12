@@ -1,44 +1,20 @@
-import React,{Component} from 'react';
-
-// const Header = () => {
-
-//     const getfullyear = () => {
-//         const newDate = new Date();
-//         return newDate.getFullYear() 
-//     }
-//     return(
-//     //  <div>
-//     //     The Year is {getfullyear()}
-//     //  </div>
-//     <>
-//     <header>
-//         <div className="logo">Logo</div>
-//         <input/>
-//     </header>
-// </>
-//     )
-// }
-
-
+import React, { Component } from 'react';
 
 class Header extends Component {
-     changed = (event) => {
-        console.log(event.target.value)
-    }
-    render(){
-        return(
+
+    render() {
+        return (
             <>
-            <header>
-                <div className='logo'
-                onClick={() => console.log('Click')}>
-                    Logo
-                </div>
-                <input
-                onChange={(event) => this.changed()}/>
-            </header>
-            
+                <header className={this.props.active ? 'noactive' : 'active'}>
+                    <div className='logo' onClick={() => console.log('Click')}>
+                        Logo
+                    </div>
+                    <input onChange={(event) => this.props.keywords(event)} />
+                    <button onClick={() => this.props.changecolor()}>Change</button>
+                </header>
             </>
         )
     }
 }
+
 export default Header;
