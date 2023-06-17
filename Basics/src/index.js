@@ -5,31 +5,47 @@ import './styles/styles.css'
 import Json from './db.json'
 import NewsList from './components/news_list';
 import Footer from './components/footer';
+import Life from './components/lifecycles';
 
 class App extends React.Component{
 state = {
+  unmount:true,
   active: false,
+  filtered:[],
   news:Json
 }
 
 getkeywords = (event) => {
-console.log(event.target.value)
+let keywords = event.target.value
+let filtered = this.state.news.filter((item)=>{
+  return  item.title.indexOf(keywords) > - 1
+})
+this.setState({
+  filtered
+})
 }
 
 changecolor = () => {
   this.setState({
-      active: this.state.active ? 'false' : 'true'
+      active: this.state.active ? false : true
   })
 }
 
 
 render(){
+  const {filtered, news} = this.state;
 return(
   <div className='hey'>
     <Header keywords={this.getkeywords}
     active={this.state.active}
     changecolor={this.changecolor}/>
-    <NewsList news={this.state.news}/>
+    <NewsList news={filtered.length === 0 ? news :  filtered}/>
+    {/* <NewsList news={this.state.filtered.length === 0 ? this.state.news :  this.state.filtered}/> */}
+
+    {
+    this.state.unmount ? <Life/>
+    : null}
+  <button onClick={() => this.setState({unmount:!this.state.unmount})}>Action</button>
     <Footer/>
   </div>
 )
