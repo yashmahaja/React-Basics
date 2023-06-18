@@ -1,0 +1,104 @@
+
+h1 { 
+    font-family: 'Pacifico', cursive;
+    color: #DB3EB1;
+    text-decoration: underline;
+    text-decoration-color: #41B6E6;
+    font-style: italic;
+  }
+
+  .inputtext{
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  
+  button.miami {
+
+    background-color:#41B6E6 !important;
+    border-color:#52a7c9 !important;
+    padding: 8px;
+    border-radius: 6px;
+    width: 90px;
+    color: #ffffff;
+    text-align: center;
+    margin: 16px 21px 13px 0px;
+  }
+  
+  .badge-danger {
+    color: #f85858;
+    font-size: 20px;
+    padding: 0px;
+  }
+  
+  .playerouter{
+    width: 300px;
+    height: 40px;
+    margin: 10px 10px 10px 10px;
+    border: #7b0144 2px solid;
+    border-radius: 5px;
+    justify-content: space-between;
+    /* background-color: black; */
+    display: flex;
+  }
+  .playerlist{
+  
+    height: 15px;
+    padding: 10px 10px 10px 20px;
+  }
+  .image{
+    height: 15px;
+    padding: 13px 13px 0px 0px;
+    /* background-color: yellow; */
+  }
+  .wrapper {
+    height:100vh;
+    display: grid;
+  }
+  .center-wrapper {
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .players_wrapper {
+    height: 200px;
+    overflow-y: scroll;
+  }
+  
+  .Toastify{
+    position:fixed;
+  }
+  
+  .badge{
+    cursor: pointer;
+  }
+  
+  .action_button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #dc3eb1;
+    color: white;
+    padding: 15px 40px;
+    font-size: 16px;
+    border: 2px solid #e184c7;
+    cursor: pointer;
+  }
+  
+  .action_button.btn_2 {
+    right: 200px;
+  }
+  
+  
+  .result_wrapper {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .result_wrapper h3 {
+    color: #41b6e6;
+  }
+  .result_wrapper div {
+    font-size: 40px;
+    color: #585858;
+  }
